@@ -10,8 +10,8 @@ services:
       - /dev/bus/usb:/dev/bus/usb
     volumes:
       - /etc/localtime:/etc/localtime:ro
-      - ./config:/config
-      - ./media:/media/frigate
+      - /home/lab/frigate/config:/config
+      - /home/lab/frigate/media:/media/frigate
       - type: tmpfs # Optional: 1GB of memory, reduces SSD/SD Card wear
         target: /tmp/cache
         tmpfs:
