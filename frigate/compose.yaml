@@ -6,9 +6,10 @@ services:
     restart: unless-stopped
     image: ghcr.io/blakeblackshear/frigate:stable
     shm_size: "64mb" # update for your cameras based on calculation above
-    devices:
-      - /dev/bus/usb:/dev/bus/usb
+    #devices:
+    #  - /dev/bus/usb:/dev/bus/usb
     volumes:
+      - /dev/bus/usb:/dev/bus/usb
       - /etc/localtime:/etc/localtime:ro
       - /home/lab/frigate/config:/config
       - /home/lab/frigate/media:/media/frigate
